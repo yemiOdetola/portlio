@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Montserrat, Fira_Mono, Poppins } from "next/font/google";
+import { Montserrat, Fira_Mono, Poppins, Inter } from "next/font/google";
 import { MobileNav, Header } from "@/components/ui";
 import "./globals.css";
 
 const montserrat = Montserrat({
   weight: ["300", "400", "500", "700", "900"],
   style: ["normal", "italic"],
+  subsets: ["latin"],
+  adjustFontFallback: false,
+});
+
+const inter = Inter({
+  weight: ["300", "400", "500", "700", "900"],
   subsets: ["latin"],
   adjustFontFallback: false,
 });
@@ -20,6 +26,7 @@ const poppins = Poppins({
 const firamono = Fira_Mono({
   weight: ["400", "500", "700"],
   subsets: ["latin"],
+  adjustFontFallback: false,
 });
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -33,7 +40,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} text-sm transition ease text-gray-700`}>
+      <body
+        className={`${inter.className} text-sm leading-6 transition ease text-gray-700`}
+      >
         <Header />
         {children}
         <MobileNav />

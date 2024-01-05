@@ -50,6 +50,11 @@ export const timeline = [
 
 export const connect = [
   {
+    social: "LinkedIn",
+    url: "https://github.com/yemiodetola",
+    icon: PiLinkedinLogoBold,
+  },
+  {
     social: "Github",
     url: "https://github.com/yemiodetola",
     icon: PiGithubLogoBold,
@@ -63,11 +68,6 @@ export const connect = [
     social: "Twitter",
     url: "https://github.com/yemiodetola",
     icon: PiTwitterLogoBold,
-  },
-  {
-    social: "LinkedIn",
-    url: "https://github.com/yemiodetola",
-    icon: PiLinkedinLogoBold,
   },
 ];
 
