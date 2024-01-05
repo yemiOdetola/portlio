@@ -1,8 +1,8 @@
 import {
-  PiGithubLogo,
-  PiLinkedinLogo,
-  PiTwitterLogo,
-  PiVoicemail,
+  PiGithubLogoBold,
+  PiLinkedinLogoBold,
+  PiTwitterLogoBold,
+  PiVoicemailBold,
 } from "react-icons/pi";
 
 export const timeline = [
@@ -52,22 +52,22 @@ export const connect = [
   {
     social: "Github",
     url: "https://github.com/yemiodetola",
-    icon: PiGithubLogo,
+    icon: PiGithubLogoBold,
   },
   {
     social: "Email",
     url: "https://github.com/yemiodetola",
-    icon: PiVoicemail,
+    icon: PiVoicemailBold,
   },
   {
     social: "Twitter",
     url: "https://github.com/yemiodetola",
-    icon: PiTwitterLogo,
+    icon: PiTwitterLogoBold,
   },
   {
     social: "LinkedIn",
     url: "https://github.com/yemiodetola",
-    icon: PiLinkedinLogo,
+    icon: PiLinkedinLogoBold,
   },
 ];
 
@@ -143,5 +143,4 @@ export const projects = [
     repo: "",
     url: "https://craftcv.vercel.app",
   },
-  
 ];

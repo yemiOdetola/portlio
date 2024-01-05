@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { PiArrowUpRight, PiGithubLogo, PiLink } from "react-icons/pi";
+import { PiArrowUpRight, PiGithubLogo,PiLink, } from "react-icons/pi";
 
 interface ProjectProps {
   title: string;

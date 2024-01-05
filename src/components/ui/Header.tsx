@@ -1,8 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { menuitems } from "@/utils/me";
+import { connect, menuitems } from "@/utils/me";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { PiMoonBold } from "react-icons/pi";
 
 export default function Header() {
   const pathname = usePathname();
@@ -16,12 +17,12 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="backdrop-blur-md w-full sticky top-0 z-10 transition ease-in-out hidden md:block">
-      <nav className="w-9/12 flex items-center justify-between max-w-4xl pb-3 pt-5 mx-auto">
+    <header className="backdrop-blur-md w-full sticky top-0 z-10 transition ease-in-out">
+      <nav className="w-11/12 flex items-center justify-between max-w-4xl pb-3 pt-5 mx-auto">
         <Link className="block" href="/home">
           Opeyemi.
         </Link>
-        <div className="flex items-center space-x-4 rounded-full py-1.5 px-2 bg-gray-200 bg-opacity-40">
+        <div className="hidden items-center space-x-4 rounded-full py-1.5 px-2 bg-gray-200 bg-opacity-40 md:flex">
           {menuitems.map((item) => {
             const active = pathname.includes(item.name.toLowerCase());
             return (
@@ -36,6 +37,25 @@ export default function Header() {
               </Link>
             );
           })}
+        </div>
+
+        <div className="flex items-center space-x-2">
+          {connect.map((el, index) => {
+            const Icon = el.icon;
+            return (
+              <Link
+                key={`connect-${index}`}
+                href={el.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon size={20} />
+              </Link>
+            );
+          })}
+          <button className="outline-none">
+            <PiMoonBold size={20} />
+          </button>
         </div>
       </nav>
     </header>
