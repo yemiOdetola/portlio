@@ -74,7 +74,7 @@ export const connect = [
 export const menuitems = [
   {
     name: "Home",
-    path: "/home",
+    path: "/",
     delay: "150ms",
   },
   {
@@ -92,4 +92,56 @@ export const menuitems = [
     path: "/blog",
     delay: "225ms",
   },
+];
+
+export const projects = [
+  {
+    title: "Resume Builder",
+    description:
+      "No description, website, or topics provided. No description, website, or topics provided.",
+    category: "typescript - ionic - angular - scss",
+    repo: "",
+    url: "https://craftcv.vercel.app",
+  },
+  {
+    title: "Resume Builder",
+    description:
+      "No description, website, or topics provided. No description, website, or topics provided.",
+    category: "typescript - ionic - angular - scss",
+    repo: "",
+    url: "https://craftcv.vercel.app",
+  },
+  {
+    title: "Resume Builder",
+    description:
+      "No description, website, or topics provided. No description, website, or topics provided.",
+    category: "typescript - ionic - angular - scss",
+    repo: "",
+    url: "https://craftcv.vercel.app",
+  },
+  {
+    title: "Resume Builder",
+    description:
+      "No description, website, or topics provided. No description, website, or topics provided.",
+    category: "typescript - ionic - angular - scss",
+    repo: "",
+    url: "https://craftcv.vercel.app",
+  },
+  {
+    title: "Resume Builder",
+    description:
+      "No description, website, or topics provided. No description, website, or topics provided.",
+    category: "typescript - ionic - angular - scss",
+    repo: "",
+    url: "https://craftcv.vercel.app",
+  },
+  {
+    title: "Resume Builder",
+    description:
+      "No description, website, or topics provided. No description, website, or topics provided.",
+    category: "typescript - ionic - angular - scss",
+    repo: "",
+    url: "https://craftcv.vercel.app",
+  },
+  
 ];

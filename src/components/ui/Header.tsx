@@ -23,7 +23,7 @@ export default function Header() {
         </Link>
         <div className="flex items-center space-x-4 rounded-full py-1.5 px-2 bg-gray-200 bg-opacity-40">
           {menuitems.map((item) => {
-            const active = pathname.includes(item.path);
+            const active = pathname.includes(item.name.toLowerCase());
             return (
               <Link
                 key={item.path}

@@ -23,12 +23,27 @@ export default function page() {
         transition={{ delay: 0.3 }}
       >
         <div className="w-full flex flex-col md:flex-row align-baseline md:space-x-6">
-          <h2 className="w-full md:w-1/5 font-semibold text-lg">Why me?</h2>
-          <p className="w-full md:w-4/5">
-            I am a passionate dev with +2 years of work experience and love
-            learning new technologies since I discovered programming, Iam
-            currently learning the way to be a DevOps specialist.
-          </p>
+          <h2 className="w-full md:w-1/5 font-semibold text-lg">About me</h2>
+          <div className="w-full md:w-4/5">
+            <div className="mb-4">
+              <h5 className="mb-2 font-semibold font-base">Interests</h5>
+              <p>
+                I am interested in learning Backend with other language like
+                Java, Go or with Python. I also want to know how to make a video
+                game with Unity or other and I am very interested in being a
+                content creator whether programming or something else.
+              </p>
+            </div>
+            <div className="mb-4">
+              <h5 className="mb-2 font-semibold font-base">Challenges</h5>
+              <p>
+                For now I am learning how to make applications with real time
+                communication such as a chat using Socket.IO, Iam also starting
+                to learn the way to be Devops using Docker, Kubernetes, AWS or
+                others.
+              </p>
+            </div>
+          </div>
         </div>
       </motion.div>
       <div className="w-full flex flex-col md:flex-row align-baseline md:space-x-6">

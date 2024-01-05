@@ -11,7 +11,7 @@ export default function MobileNav() {
     <div className="w-full fixed flex flex-col items-center bottom-6 z-10 md:hidden">
       <div className="flex space-x-0.5 p-1.5 pb-1 bg-zinc-100 rounded-3xl dark:bg-[#141516] dark:border-2 dark:border-zinc-800 drop-shadow-md backdrop-filter backdrop-blur-xl dark:bg-opacity-30">
         {menuitems.map((item) => {
-          const active = pathname.includes(item.path);
+          const active = pathname.includes(item.name.toLowerCase());
           return (
             <button
               key={item.path}
