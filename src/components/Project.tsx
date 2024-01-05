@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { PiArrowUpRight, PiGithubLogo,PiLink, } from "react-icons/pi";
+import { PiArrowUpRight, PiGithubLogo, PiLink } from "react-icons/pi";
 
 interface ProjectProps {
   title: string;
@@ -22,16 +22,20 @@ export default function Project({
     hover:shadow-[0_2px_4px_rgb(0,0,0,0.05)] p-5 transition-all ease group hover:cursor-pointer"
     >
       <div className="w-full flex justify-between items-center rounded gap-5">
-        <Image
-          src="/images/sety.png"
-          alt="project favicon"
-          width={90}
-          height={90}
-          className="rounded"
-        />
+        <div className="hidden md:block">
+          <Image
+            src="/images/sety.png"
+            alt="project favicon"
+            width={90}
+            height={90}
+            className="rounded"
+          />
+        </div>
         <div className="">
           <div className="flex items-center">
-            <h3 className="text-md lg:text-lg font-normal mb-2 mr-2">{title}</h3>
+            <h3 className="text-md lg:text-lg font-normal mb-2 mr-2">
+              {title}
+            </h3>
             <PiArrowUpRight
               size={18}
               className="relative bottom-1 text-zinc-500"

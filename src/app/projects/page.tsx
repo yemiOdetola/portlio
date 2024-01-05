@@ -17,7 +17,6 @@ export default function Projects() {
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col gap-6"></div>
     </Container>
   );
 }
