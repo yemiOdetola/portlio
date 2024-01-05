@@ -70,3 +70,26 @@ export const connect = [
     icon: PiLinkedinLogo,
   },
 ];
+
+export const menuitems = [
+  {
+    name: "Home",
+    path: "/home",
+    delay: "150ms",
+  },
+  {
+    name: "About",
+    path: "/about",
+    delay: "175ms",
+  },
+  {
+    name: "Projects",
+    path: "/projects",
+    delay: "200ms",
+  },
+  {
+    name: "Blog",
+    path: "/blog",
+    delay: "225ms",
+  },
+];

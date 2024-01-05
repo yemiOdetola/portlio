@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import { MobileNav, Header } from "@/components/ui";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -20,7 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} text-sm`}>{children}</body>
+      <body className={`${montserrat.className} text-sm transition ease`}>
+        <Header />
+        {children}
+        <MobileNav />
+      </body>
     </html>
   );
 }

@@ -14,7 +14,7 @@ const containerVariants = {
 
 export default function page() {
   return (
-    <Container>
+    <Container className="my-12">
       <motion.div
         className="w-full mb-16"
         initial={{ opacity: 0 }}
@@ -22,7 +22,7 @@ export default function page() {
         viewport={{ once: true }}
         transition={{ delay: 0.3 }}
       >
-        <div className="w-full flex flex-col md:flex-row align-baseline space-x-6">
+        <div className="w-full flex flex-col md:flex-row align-baseline md:space-x-6">
           <h2 className="w-full md:w-1/5 font-semibold text-lg">Why me?</h2>
           <p className="w-full md:w-4/5">
             I am a passionate dev with +2 years of work experience and love
@@ -31,9 +31,9 @@ export default function page() {
           </p>
         </div>
       </motion.div>
-      <div className="w-full flex flex-col md:flex-row align-baseline space-x-6">
+      <div className="w-full flex flex-col md:flex-row align-baseline md:space-x-6">
         <h2 className="w-full md:w-1/5 font-semibold text-lg">Fun times</h2>
-        <div className="w-full md:w-4/5 ml-2">
+        <div className="w-full md:w-4/5 ml-0 md:ml-2">
           {timeline.map((tl, index) => (
             <Timeline
               key={`timeline-${index}`}
@@ -43,7 +43,7 @@ export default function page() {
           ))}
         </div>
       </div>
-      <div className="w-full flex flex-col md:flex-row align-baseline space-x-6 mb-16">
+      <div className="w-full flex flex-col md:flex-row align-baseline md:md:space-x-6 mb-16">
         <h2 className="w-full md:w-1/5 font-semibold text-lg">Connect</h2>
         <div className="w-full md:w-4/5">
           <p className="font-medium">Reach out!. I would love to have a chat</p>
@@ -70,7 +70,7 @@ export default function page() {
         </div>
       </div>
 
-      <motion.div className="w-full flex flex-col md:flex-row align-baseline space-x-6">
+      <motion.div className="w-full flex flex-col md:flex-row align-baseline md:space-x-6">
         <h2 className="w-full md:w-1/5 font-semibold text-lg">Whats fun?</h2>
         <div className="w-full md:w-4/5">
           <div className="mb-4">
