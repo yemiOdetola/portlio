@@ -37,11 +37,11 @@ export default function Home() {
             </p>
             <p>
               When not immersed in coding, I&apos;m probably reading some
-              bookmarked tech articles, leveling up my backend skills, and
-              sometimes watching hoop highlight reels. I love exploring the
-              theoretical realm of CS almost as much as I love bringing ideas to
-              life in code. Each feeds the other in an endless quest to satisfy
-              my curiosity.
+              bookmarked tech articles, leveling up my backend skills, sometimes
+              watching hoop highlight reels. I love exploring the theoretical
+              realm of CS almost as much as I love bringing ideas to life in
+              code. Each feeds the other in an endless quest to satisfy my
+              curiosity.
             </p>
           </div>
           <div className="flex items-center space-x-4 my-4">
@@ -64,27 +64,9 @@ export default function Home() {
               );
             })}
           </div>
-          {/* <div className="flex items-center flex-wrap my-4">
-            {connect.map((el, index) => {
-              const Icon = el.icon;
-              return (
-                <Link
-                  key={`connect-${index}`}
-                  href={el.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center w-full gap-2 text-red-400 md:w-[48%]"
-                >
-                  <Icon size={36} />
-                  <span className="text-sm block font-semibold">{el.url}</span>
-                </Link>
-              );
-            })}
-          </div> */}
         </div>
         <div className="w-3/12 hidden md:block">
           <Image
-            // src="/images/sety.png"
             src="/images/pic.jpg"
             className="rounded-full"
             alt="OOdetola gravatar"
@@ -93,29 +75,31 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="my-4">
+      {/* <div className="my-4">
         <Link href="/about" className="mdmmsmmsmss">
           See more about me
         </Link>
-      </div>
+      </div> */}
       {/* <div className="my-4 flex items-center">
         <div className="bg-green-300 flex flex-col items-center h-64 w-[33%]"></div>
         <div className="bg-red-300 flex flex-col items-center h-64 w-[33%]"></div>
         <div className="bg-zinc-300 flex flex-col items-center h-64 w-[33%]"></div>
       </div> */}
       <div className="my-4">
-        {trunkExp.map((exp, index) => {
-          return (
-            <Accordion
-              key={index}
-              active={active == index}
-              handleToggle={() => handleToggle(index)}
-              exp={exp}
-            />
-          );
-        })}
+        <h3>Recent experiences</h3>
+        <div className="my-4">
+          {trunkExp.map((exp, index) => {
+            return (
+              <Accordion
+                key={index}
+                active={active == index}
+                handleToggle={() => handleToggle(index)}
+                exp={exp}
+              />
+            );
+          })}
+        </div>
       </div>
-      <h1>Create an accordion of recent experiences</h1>
     </Container>
   );
 }

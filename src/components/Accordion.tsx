@@ -4,17 +4,19 @@ import React, { useRef } from "react";
 export default function Accordion({ handleToggle, active, exp }: any) {
   const contentEl: any = useRef();
   console.log("contentEl:::: ", contentEl);
-  const { startDate, endDate, position, company, url, logo, summary } = exp;
+  const { startDate, endDate, position, company, summary } = exp;
   return (
-    <div className="cursor-pointer mb-2 rounded-lg border border-zinc-200 transition-all duration-300">
+    <div className="cursor-pointer mb-2 rounded-lg border text-gray-600 border-zinc-200 transition-all duration-300">
       <div
-        className={`flex items-start rounded-lg cursor-pointer justify-between transition duration-300 p-3`}
+        className={`flex items-center rounded-lg text-sm cursor-pointer justify-between transition duration-300 p-3 ${
+          active && ""
+        }`}
         onClick={handleToggle}
       >
-        <h4 className="font-medium text-base relative mb-0 transition-all duration-300">
+        <h4 className="mb-0 transition-all duration-300">
           {position} @ {company}
         </h4>
-        <h5 className="font-medium text-base relative mb-0 transition-all duration-300">
+        <h5 className="mb-0 transition-all duration-300">
           {startDate} - {endDate || "Present"}
         </h5>
       </div>
