@@ -10,6 +10,7 @@ export default function Projects() {
         <h2 className="w-full md:w-1/5 font-semibold text-lg">Projects</h2>
         <div className="space-y-5">
           <p>A selection of projects I worked on in the past few years.</p>
+          <a href="http://">THISSIS SISJSISI</a>
           <div className="space-y-8">
             {projects.map((project, index) => (
               <Project key={`project-${index}`} {...project} />

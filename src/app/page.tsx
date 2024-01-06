@@ -9,8 +9,6 @@ export default function Home() {
   const [active, setActive] = useState<any>(1);
   const trunkExp = timeline.slice(0, 3);
 
-  console.log("trunkExp ", trunkExp);
-
   const handleToggle = (index: any) => {
     if (active === index) {
       setActive(null);

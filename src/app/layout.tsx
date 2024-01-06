@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Fira_Mono, Poppins, Inter } from "next/font/google";
-import { MobileNav, Header } from "@/components/ui";
+import { MobileNav, Cursor, Header } from "@/components/ui";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -43,6 +43,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} text-sm leading-6 transition ease text-gray-700`}
       >
+        <Cursor />
         <Header />
         {children}
         <MobileNav />

@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 
 export default function Accordion({ handleToggle, active, exp }: any) {
   const contentEl: any = useRef();
-  console.log("contentEl:::: ", contentEl);
   const { startDate, endDate, position, company, summary } = exp;
   return (
     <div className="cursor-pointer mb-2 rounded-lg border text-gray-600 border-zinc-200 transition-all duration-300">
