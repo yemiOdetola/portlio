@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Fira_Mono, Poppins, Inter } from "next/font/google";
-import { MobileNav, Cursor, Header } from "@/components/ui";
+import { MobileNav, Cursor, Header, Footer } from "@/components/ui";
 import "./globals.css";
 
 const montserrat = Montserrat({
