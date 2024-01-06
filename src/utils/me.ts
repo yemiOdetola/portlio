@@ -51,22 +51,22 @@ export const timeline = [
 export const connect = [
   {
     social: "LinkedIn",
-    url: "https://github.com/yemiodetola",
+    url: "linkedin.com/in/yemiodetola",
     icon: PiLinkedinLogoBold,
   },
   {
     social: "Github",
-    url: "https://github.com/yemiodetola",
+    url: "github.com/yemiodetola",
     icon: PiGithubLogoBold,
   },
   {
     social: "Email",
-    url: "https://github.com/yemiodetola",
+    url: "yemiotola@gmail.com",
     icon: PiVoicemailBold,
   },
   {
     social: "Twitter",
-    url: "https://github.com/yemiodetola",
+    url: "twitter.com/yemiodetola",
     icon: PiTwitterLogoBold,
   },
 ];

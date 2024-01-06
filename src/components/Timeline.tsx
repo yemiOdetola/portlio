@@ -10,9 +10,9 @@ export default function Timeline({ active, timeline }: TimelineProps) {
   return (
     <div className="w-full flex justify-start gap-7 border-neutral-800 pb-8 border-l last:border-l-0 last:pb-16">
       <div className="relative">
-        <div className="absolute top-0 -left-2 w-4 h-4 rounded-full aspect-square outline-black bg-neutral-800  active:bg-emerald-500">
+        <div className="absolute top-0 -left-2 w-4 h-4 rounded-full aspect-square outline-black bg-neutral-800 active:bg-red-300  active:bg-red-500">
           {active && (
-            <div className="absolute top-0 left-0 rounded-full -z-10 w-4 h-4 bg-emerald-500 animate-ping aspect-square" />
+            <div className="absolute top-0 left-0 rounded-full -z-10 w-4 h-4 bg-red-500 animate-ping aspect-square" />
           )}
         </div>
       </div>

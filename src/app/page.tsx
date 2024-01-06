@@ -1,13 +1,27 @@
+"use client";
 import Image from "next/image";
-import { Container } from "@/components";
-import { connect } from "@/utils/me";
+import { Accordion, Container } from "@/components";
+import { connect, timeline } from "@/utils/me";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+  const [active, setActive] = useState<any>(1);
+  const trunkExp = timeline.slice(0, 3);
+
+  console.log("trunkExp ", trunkExp);
+
+  const handleToggle = (index: any) => {
+    if (active === index) {
+      setActive(null);
+    } else {
+      setActive(index);
+    }
+  };
   return (
-    <Container className="py-12">
+    <Container className="py-12 ">
       <div className="flex items-start justify-between">
-        <div className="w-8/12 text-gray-700">
+        <div className="w-full md:w-8/12 text-gray-700">
           <div className="intro">
             <h2 className="text-xl font-medium md:text-3xl mb-4">
               Hi, I&apos;m Odetola Azeez.
@@ -30,37 +44,78 @@ export default function Home() {
               my curiosity.
             </p>
           </div>
+          <div className="flex items-center space-x-4 my-4">
+            {connect.map((el, index) => {
+              const Icon = el.icon;
+              return (
+                <Link
+                  key={`connect-${index}`}
+                  href={
+                    el.social == "Email"
+                      ? "mailto:yemiotola@gmail.com"
+                      : `https://${el.url}`
+                  }
+                  target="_blank"
+                  className="text-red-700"
+                  rel="noopener noreferrer"
+                >
+                  <Icon size={36} />
+                </Link>
+              );
+            })}
+          </div>
+          {/* <div className="flex items-center flex-wrap my-4">
+            {connect.map((el, index) => {
+              const Icon = el.icon;
+              return (
+                <Link
+                  key={`connect-${index}`}
+                  href={el.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center w-full gap-2 text-red-400 md:w-[48%]"
+                >
+                  <Icon size={36} />
+                  <span className="text-sm block font-semibold">{el.url}</span>
+                </Link>
+              );
+            })}
+          </div> */}
         </div>
         <div className="w-3/12 hidden md:block">
           <Image
-            src="/images/sety.png"
+            // src="/images/sety.png"
+            src="/images/pic.jpg"
+            className="rounded-full"
             alt="OOdetola gravatar"
             width={140}
             height={158}
           />
         </div>
       </div>
-
       <div className="my-4">
         <Link href="/about" className="mdmmsmmsmss">
           See more about me
         </Link>
       </div>
-      <div className="flex items-center space-x-4 my-4">
-        {connect.map((el, index) => {
-          const Icon = el.icon;
+      {/* <div className="my-4 flex items-center">
+        <div className="bg-green-300 flex flex-col items-center h-64 w-[33%]"></div>
+        <div className="bg-red-300 flex flex-col items-center h-64 w-[33%]"></div>
+        <div className="bg-zinc-300 flex flex-col items-center h-64 w-[33%]"></div>
+      </div> */}
+      <div className="my-4">
+        {trunkExp.map((exp, index) => {
           return (
-            <Link
-              key={`connect-${index}`}
-              href={el.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icon size={36} />
-            </Link>
+            <Accordion
+              key={index}
+              active={active == index}
+              handleToggle={() => handleToggle(index)}
+              exp={exp}
+            />
           );
         })}
       </div>
+      <h1>Create an accordion of recent experiences</h1>
     </Container>
   );
 }

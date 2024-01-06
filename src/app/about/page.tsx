@@ -63,19 +63,19 @@ export default function page() {
         <div className="w-full md:w-4/5">
           <p className="font-medium">Reach out!. I would love to have a chat</p>
           <div className="flex flex-wrap gap-4 mt-4">
-            {connect.map((con, index) => {
-              const Icon = con.icon;
+            {connect.map((el, index) => {
+              const Icon = el.icon;
               return (
                 <Link
                   key={`connect-${index}`}
-                  href={con.url}
+                  href={el.social == 'Email' ? 'mailto:yemiotola@gmail.com' : `https://${el.url}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-[48%] p-4 rounded border border-gray-300 flex items-center justify-between hover:opacity-70"
                 >
                   <div className="flex items-center gap-x-2">
                     <Icon size={40} />
-                    <span>{con.social}</span>
+                    <span>{el.social}</span>
                   </div>
                   <PiArrowElbowRight />
                 </Link>
