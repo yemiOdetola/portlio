@@ -12,8 +12,8 @@ body {
   width: 64px;
   height: 64px;
   border-radius: 100%;
-  border: 1px solid black;
-  transition: all 100ms ease-out;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  transition: all 233ms ease-out;
   position: fixed;
   pointer-events: none;
   left: 0;
@@ -22,19 +22,19 @@ body {
 }
 
 .cursor2 {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 100%;
-  background-color: black;
-  opacity: .4;
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  transition: width .3s, height .3s, opacity .3s;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
 }
 
 .cursorinnerhover {
   width: 64px;
   height: 64px;
-  opacity: .5;
+  border: 2px solid #fff;
+  background-color: rgba(0, 0, 0, 0.4);
 }
