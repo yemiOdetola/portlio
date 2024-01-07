@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Home() {
-  const [active, setActive] = useState<any>(1);
+  const [active, setActive] = useState<any>(0);
   const trunkExp = timeline.slice(0, 3);
 
   const handleToggle = (index: any) => {
@@ -17,29 +17,31 @@ export default function Home() {
     }
   };
   return (
-    <Container className="py-12 ">
+    <Container className="pt-12 pb-24">
       <div className="flex items-start justify-between">
         <div className="w-full md:w-8/12 text-gray-700">
           <div className="intro">
-            <h2 className="text-xl font-medium md:text-3xl mb-4">
-              Hi, I&apos;m Odetola Azeez.
+            <h2 className="text-3xl font-medium md:text-3xl mb-4">
+              Hi, I&apos;m <br /> Odetola Azeez.
             </h2>
           </div>
           <div className="text-sm leading-loose space-y-3">
             <p>
-              Your goto artist - a javaScript engineer. I channel my days (and
-              often, moonlit nights) into painting the canvas of the internet.
-              With each (project) and intricately woven line of code, From &lt;
-              and /&gt; into vivid, immersive experiences that dance across the
-              digital canvas.
+              <span className="text-red-400">
+                Your goto artist - a frontend engineer.
+              </span>{" "}
+              I channel my days (and often, moonlit nights) into painting the
+              canvas of the internet. Through every project and intricately
+              woven line of code, I weave &lt; and /&gt; into vibrant, immersive
+              experiences that come alive across the digital canvas.
             </p>
             <p>
               When not immersed in coding, I&apos;m probably reading some
-              bookmarked tech articles, leveling up my backend skills, sometimes
-              watching hoop highlight reels. I love exploring the theoretical
-              realm of CS almost as much as I love bringing ideas to life in
-              code. Each feeds the other in an endless quest to satisfy my
-              curiosity.
+              bookmarked tech articles, leveling up my backend skills, or
+              getting lost in hoop highlight reels. I love exploring the
+              theoretical realm of CS almost as much as I love bringing ideas to
+              life in code. Each feeds the other in an endless quest to satisfy
+              my curiosity.
             </p>
           </div>
           <div className="flex items-center space-x-4 my-4">
@@ -54,7 +56,7 @@ export default function Home() {
                       : `https://${el.url}`
                   }
                   target="_blank"
-                  className="text-red-700"
+                  className="text-red-900"
                   rel="noopener noreferrer"
                 >
                   <Icon size={36} />
@@ -73,16 +75,7 @@ export default function Home() {
           />
         </div>
       </div>
-      {/* <div className="my-4">
-        <Link href="/about" className="mdmmsmmsmss">
-          See more about me
-        </Link>
-      </div> */}
-      {/* <div className="my-4 flex items-center">
-        <div className="bg-green-300 flex flex-col items-center h-64 w-[33%]"></div>
-        <div className="bg-red-300 flex flex-col items-center h-64 w-[33%]"></div>
-        <div className="bg-zinc-300 flex flex-col items-center h-64 w-[33%]"></div>
-      </div> */}
+
       <div className="my-4">
         <h3>Recent experiences</h3>
         <div className="my-4">
