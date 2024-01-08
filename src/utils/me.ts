@@ -32,7 +32,14 @@ export const timeline = [
     position: "Frontend Engineer",
     company: "Netzstrategen GmbH",
     url: "https://netzstrategen.com/",
-    tools: ["Javascript", "Vuejs", "Vuex", "Vant 3", "SCSS", "Google Firestore"],
+    tools: [
+      "Javascript",
+      "Vuejs",
+      "Vuex",
+      "Vant 3",
+      "SCSS",
+      "Google Firestore",
+    ],
     logo: "/images/netz.svg",
     summary:
       "Enhanced the daily nutrient intake modules in Loprogramme PWA, boosting tracking functionalities by 45% and slashing protein calculation time from 5 to 2.5s.Developed new features integrating with Google Cloud Firestore, optimized UI/performance, designed a custom graph for protein intake history, and participated in code reviews.",
@@ -95,11 +102,6 @@ export const timeline = [
   },
 ];
 
-
-// As a technical instructor, conducted training for over 80 students on web development and spearheaded projects including developing a pixel-perfect website for high-profile Akwa Ibom@30 events using HTML, CSS and JavaScript while meeting tight deadlines. Led redesign of company website using mobile-first responsive design and modern web standards.
-
-
-
 export const connect = [
   {
     social: "LinkedIn",
@@ -148,51 +150,120 @@ export const menuitems = [
 
 export const projects = [
   {
-    title: "Resume Builder",
-    description:
-      "No description, website, or topics provided. No description, website, or topics provided.",
-    category: "typescript - ionic - angular - scss",
-    repo: "",
-    url: "https://craftcv.vercel.app",
+    title: "Frontend",
+    works: [
+      {
+        title: "Mojec meters",
+        description:
+          "The meter allocation and ordering process involves assigning meter numbers to households upon registration, enabling their use with IKEDC, IBEDC, EDC...",
+        tech: ["Typescript", "Angular", "SCSS", "Rxjs", "UI design"],
+        repo: "",
+        image: "/images/mojec.svg",
+        url: "https://mojecmeters.com/meter",
+      },
+      {
+        title: "Sety v2",
+        description:
+          "Sety is delivering on-demand safety and security for businesses, individuals and families. ",
+        tech: ["Typescript", "React", "Tailwindcss", "Framer motion"],
+        repo: "",
+        image: "/images/sety.png",
+        url: "http://sety-landing.surge.sh/",
+      },
+      {
+        title: "Cudo",
+        description:
+          "Get quick and confidential consultation with top Medical Doctors, Physiotherapists and Pharmacists across Nigeria using our unique on-demand app.",
+        tech: ["Typescript", "React", "Sass", "HTML5 & CSS3", "A11y"],
+        repo: "",
+        image: "/images/cudo.png",
+        url: "https://cudoapp.com/",
+      },
+      {
+        title: "Resume Builder",
+        description:
+          "No description, website, or topics provided. No description, website, or topics provided.",
+        tech: [
+          "Typescript",
+          "Nextjs(React)",
+          "Zustand",
+          "Tailwindcss",
+          "HTML5",
+          "A11y",
+        ],
+        repo: "",
+        image: "/images/craftcv.svg",
+        url: "https://craftcv.vercel.app",
+      },
+    ],
   },
   {
-    title: "Resume Builder",
-    description:
-      "No description, website, or topics provided. No description, website, or topics provided.",
-    category: "typescript - ionic - angular - scss",
-    repo: "",
-    url: "https://craftcv.vercel.app",
+    title: "Mobile",
+    works: [
+      {
+        title: "Rapidpay",
+        description:
+          "Rapidpay is a cryptocurrency exchange and lending platform that makes it easy for you to buy, sell, store and take a loan with Bitcoin, Ethereum and USDT.",
+        tech: ["Typescript", "React Native", "Styled Components", "Redux"],
+        repo: "",
+        image: "/images/rapidpay.webp",
+        url: "http://sety-landing.surge.sh/",
+      },
+      {
+        title: "Finovo",
+        description:
+          "Finovo is a digital platform providing financial, lifestyle and business services wherever you are in the World. We offer you More of everything now.",
+        tech: ["Typescript", "React Native", "Styled Components", "Redux"],
+        repo: "",
+        image: "/images/finovo.webp",
+        url: "http://sety-landing.surge.sh/",
+      },
+      {
+        title: "Clipp",
+        description:
+          "Clipp allows you to create a virtual bank account in Dollars, Pounds, Euro and Naira. You can send out your account details to receive money in all the currencies available.",
+        tech: ["Typescript", "React Native", "Styled Components", "Redux"],
+        repo: "",
+        image: "/images/clipp.webp",
+        url: "http://sety-landing.surge.sh/",
+      },
+      {
+        title: "Sety",
+        description: "Sety users mobile application",
+        tech: [
+          "Typescript",
+          "React Native",
+          "API",
+          "Firebase",
+          "Redux toolkit",
+        ],
+        repo: "",
+        image: "/images/sety.png",
+        url: "https://play.google.com/store/apps/details?id=com.sety",
+      },
+    ],
   },
   {
-    title: "Resume Builder",
-    description:
-      "No description, website, or topics provided. No description, website, or topics provided.",
-    category: "typescript - ionic - angular - scss",
-    repo: "",
-    url: "https://craftcv.vercel.app",
-  },
-  {
-    title: "Resume Builder",
-    description:
-      "No description, website, or topics provided. No description, website, or topics provided.",
-    category: "typescript - ionic - angular - scss",
-    repo: "",
-    url: "https://craftcv.vercel.app",
-  },
-  {
-    title: "Resume Builder",
-    description:
-      "No description, website, or topics provided. No description, website, or topics provided.",
-    category: "typescript - ionic - angular - scss",
-    repo: "",
-    url: "https://craftcv.vercel.app",
-  },
-  {
-    title: "Resume Builder",
-    description:
-      "No description, website, or topics provided. No description, website, or topics provided.",
-    category: "typescript - ionic - angular - scss",
-    repo: "",
-    url: "https://craftcv.vercel.app",
+    title: "Others",
+    works: [
+      {
+        title: "Quze Backpack - Browser Extension",
+        description:
+          "No description, website, or topics provided. No description, website, or topics provided.",
+        tech: ["Javascript", "Manifest", "HTML5 & css", "Web extension"],
+        repo: "",
+        image: "/images/quze.svg",
+        url: "https://chromewebstore.google.com/detail/quze-backpack/kadiombanichkkgjcalkjiondjbngmel",
+      },
+      {
+        title: "Mastermind game",
+        description:
+          "You'll be provided with 6 colors to choose from for your guess, which a secret color code is created from. After submitting your guess in each instance, a color in the right position, gets you a green point.",
+        tech: ["React", "Sass", "CSS3 Animation"],
+        repo: "",
+        image: "/images/mmind.svg",
+        url: "https://mmind.surge.sh/",
+      },
+    ],
   },
 ];

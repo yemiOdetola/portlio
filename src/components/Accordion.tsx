@@ -26,7 +26,7 @@ export default function Accordion({ handleToggle, active, exp }: any) {
         }`}
         style={
           active
-            ? { height: contentEl?.current?.scrollHeight || 72 }
+            ? { height: contentEl?.current?.scrollHeight || 112 }
             : { height: "0px" }
         }
       >

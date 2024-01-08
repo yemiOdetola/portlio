@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Fira_Mono, Poppins, Inter } from "next/font/google";
+import { Montserrat, Fira_Mono, Poppins, Inter, Averia_Sans_Libre } from "next/font/google";
 import { MobileNav, Cursor, Header, Footer } from "@/components/ui";
 import "./globals.css";
 
