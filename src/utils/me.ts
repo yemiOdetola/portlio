@@ -171,13 +171,13 @@ export const projects = [
         url: "http://sety-landing.surge.sh/",
       },
       {
-        title: "Cudo",
+        title: "Finovo",
         description:
-          "Get quick and confidential consultation with top Medical Doctors, Physiotherapists and Pharmacists across Nigeria using our unique on-demand app.",
-        tech: ["Typescript", "React", "Sass", "HTML5 & CSS3", "A11y"],
+          "Finovo is a digital platform providing financial, lifestyle and business services wherever you are in the World.",
+        tech: ["Javascript", "JQuery", "HTML5 & Css", "A11y"],
         repo: "",
-        image: "/images/cudo.png",
-        url: "https://cudoapp.com/",
+        image: "/images/finovo.webp",
+        url: "https://finovo.ng",
       },
       {
         title: "Resume Builder",
@@ -194,6 +194,15 @@ export const projects = [
         repo: "",
         image: "/images/craftcv.svg",
         url: "https://craftcv.vercel.app",
+      },
+      {
+        title: "Cudo",
+        description:
+          "Get quick and confidential consultation with top Medical Doctors, Physiotherapists and Pharmacists across Nigeria using our unique on-demand app.",
+        tech: ["Typescript", "React", "Sass", "HTML5 & CSS3", "A11y"],
+        repo: "",
+        image: "/images/cudo.png",
+        url: "https://cudoapp.com/",
       },
     ],
   },
