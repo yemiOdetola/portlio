@@ -151,6 +151,7 @@ export const menuitems = [
 export const projects = [
   {
     title: "Frontend",
+    type: "frontend",
     works: [
       {
         title: "Mojec meters",
@@ -169,6 +170,15 @@ export const projects = [
         repo: "",
         image: "/images/sety.png",
         url: "http://sety-landing.surge.sh/",
+      },
+      {
+        title: "The roothub",
+        description:
+          " A coworking space, part innovation lab, business incubator, and part community for professionals and creatives",
+        tech: ["Typescript", "Angular", "SCSS", "Rxjs", "UI design"],
+        repo: "",
+        image: "/images/roothub.png",
+        url: "https://www.wearetheroothub.com/",
       },
       {
         title: "Finovo",
@@ -208,6 +218,7 @@ export const projects = [
   },
   {
     title: "Mobile",
+    type: "mobile",
     works: [
       {
         title: "Rapidpay",
@@ -216,24 +227,7 @@ export const projects = [
         tech: ["Typescript", "React Native", "Styled Components", "Redux"],
         repo: "",
         image: "/images/rapidpay.webp",
-        url: "http://sety-landing.surge.sh/",
-      },
-      {
-        title: "Finovo",
-        description:
-          "Finovo is a digital platform providing financial, lifestyle and business services wherever you are in the World. We offer you More of everything now.",
-        tech: ["Typescript", "React Native", "Styled Components", "Redux"],
-        repo: "",
-        image: "/images/finovo.webp",
-        url: "http://sety-landing.surge.sh/",
-      },
-      {
-        title: "Clipp",
-        description:
-          "Clipp allows you to create a virtual bank account in Dollars, Pounds, Euro and Naira. You can send out your account details to receive money in all the currencies available.",
-        tech: ["Typescript", "React Native", "Styled Components", "Redux"],
-        repo: "",
-        image: "/images/clipp.webp",
+        gif: "/images/rapidpay.gif",
         url: "http://sety-landing.surge.sh/",
       },
       {
@@ -248,12 +242,34 @@ export const projects = [
         ],
         repo: "",
         image: "/images/sety.png",
+        gif: "/images/sety.gif",
         url: "https://play.google.com/store/apps/details?id=com.sety",
+      },
+      {
+        title: "Finovo",
+        description:
+          "Finovo is a digital platform providing financial, lifestyle and business services wherever you are in the World. We offer you More of everything now.",
+        tech: ["Typescript", "React Native", "Styled Components", "Redux"],
+        repo: "",
+        image: "/images/finovo.webp",
+        gif: "/images/finovo.gif",
+        url: "http://sety-landing.surge.sh/",
+      },
+      {
+        title: "Clipp",
+        description:
+          "Create a virtual bank account in Dollars, Pounds, Euro and Naira. Receive money in all currencies available.",
+        tech: ["Typescript", "React Native", "Redux toolkit"],
+        repo: "",
+        image: "/images/clipp.webp",
+        gif: "/images/clipp.gif",
+        url: "http://sety-landing.surge.sh/",
       },
     ],
   },
   {
     title: "Others",
+    type: "misc",
     works: [
       {
         title: "Quze Backpack - Browser Extension",
@@ -276,3 +292,5 @@ export const projects = [
     ],
   },
 ];
+
+export type ProjectTypes = "misc" | "mobile" | "frontend";
