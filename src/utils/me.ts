@@ -253,7 +253,7 @@ export const projects = [
         repo: "",
         image: "/images/finovo.webp",
         gif: "/images/finovo.gif",
-        url: "http://sety-landing.surge.sh/",
+        url: "https://play.google.com/store/apps/details?id=com.finovo&hl=en_US",
       },
       {
         title: "Clipp",
@@ -263,7 +263,7 @@ export const projects = [
         repo: "",
         image: "/images/clipp.webp",
         gif: "/images/clipp.gif",
-        url: "http://sety-landing.surge.sh/",
+        url: "https://play.google.com/store/apps/details?id=com.clipp.africa&hl=en_US",
       },
     ],
   },
