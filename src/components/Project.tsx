@@ -103,19 +103,34 @@ export default function Project({
           alt={description}
           width={320}
           height={620}
-          className="mx-auto"
+          className="mx-auto max-h-[400px] object-contain"
         />
         <div className="mt-2 p-4 overflow-y-auto">
+          <h5 className="font-semibold text-base">About</h5>
           <p className="my-2 block">{description}</p>
-          <div className="flex items-center flex-wrap gap-3">
-            {tech.map((el, index) => (
-              <span
-                className="border border-gray-400 block py-1 px-3 text-xs rounded-xl"
-                key={`tech-${index}`}
-              >
-                {el}
-              </span>
-            ))}
+          <div className="mt-6">
+            <h5 className="font-semibold text-base mb-2">Technologies</h5>
+            <div className="flex items-center flex-wrap gap-3">
+              {tech.map((el, index) => (
+                <span
+                  className="border border-gray-400 block py-1 px-3 text-xs rounded-xl"
+                  key={`tech-${index}`}
+                >
+                  {el}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="mt-6">
+            <h5 className="font-semibold text-base mb-2">URL</h5>
+            <Link
+              href={url}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="block underline font-semibold"
+            >
+              {url}
+            </Link>
           </div>
         </div>
       </SideDrawer>

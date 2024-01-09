@@ -258,8 +258,8 @@ export const projects = [
       {
         title: "Clipp",
         description:
-          "Create a virtual bank account in Dollars, Pounds, Euro and Naira. Receive money in all currencies available.",
-        tech: ["Typescript", "React Native", "Redux toolkit"],
+          "Clipp allows you to create a virtual bank account in Dollars, Pounds, Euro and Naira. You can send out your account details to receive money in all the currencies available.",
+        tech: ["Typescript", "React Native", "Styled Components", "Redux"],
         repo: "",
         image: "/images/clipp.webp",
         gif: "/images/clipp.gif",
