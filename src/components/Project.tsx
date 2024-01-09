@@ -101,9 +101,9 @@ export default function Project({
         <Image
           src={gif}
           alt={description}
-          width={320}
-          height={620}
-          className="mx-auto max-h-[400px] object-contain"
+          width={360}
+          height={600}
+          className="mx-auto max-h-[480px] object-contain"
         />
         <div className="mt-2 p-4 overflow-y-auto">
           <h5 className="font-semibold text-base">About</h5>
