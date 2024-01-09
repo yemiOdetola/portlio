@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode } from "react";
+import React, { ReactNode, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface SideDrawerProps {
@@ -20,6 +20,23 @@ export default function SideDrawer({
     }
   };
 
+  const handleEscKey = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape" && isOpen) {
+        onClose();
+      }
+    },
+    [isOpen, onClose]
+  );
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleEscKey);
+
+    return () => {
+      window.removeEventListener("keydown", handleEscKey);
+    };
+  }, [handleEscKey]);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -29,14 +46,14 @@ export default function SideDrawer({
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
           onClick={closeOnOverlayClick}
-          className="fixed bglay inset-0 z-50 flex items-center justify-center bg-black bg-opacity-20"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-20"
         >
           <motion.div
             initial={{ x: "120%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "120%", opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 right-0 bottom-0 z-50 w-[420px] bg-white shadow-lg side-drawer"
+            className="absolute top-0 right-0 bottom-0 z-50 w-[440px] bg-white shadow-lg overflow-y-auto"
             onClick={closeOnOverlayClick}
           >
             <div className="flex justify-end p-4">

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, useEffect } from "react";
+import React, { ReactNode, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface ModalProps {
@@ -16,6 +16,23 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
       onClose();
     }
   };
+
+  const handleEscKey = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape" && isOpen) {
+        onClose();
+      }
+    },
+    [isOpen, onClose]
+  );
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleEscKey);
+
+    return () => {
+      window.removeEventListener("keydown", handleEscKey);
+    };
+  }, [handleEscKey]);
 
   return (
     <AnimatePresence>
@@ -33,9 +50,12 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -50, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="relative bg-white rounded-lg p-8 w-80"
+            className="relative bg-white rounded-lg p-8 min-w-11/12 md:w-10/12 h-5/6"
           >
-            <button onClick={onClose} className="absolute top-4 right-4">
+            <button
+              onClick={onClose}
+              className="text-xs font-bold underline absolute top-2 right-2"
+            >
               Close
             </button>
             {children}

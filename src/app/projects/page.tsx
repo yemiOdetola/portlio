@@ -9,7 +9,6 @@ export default function Projects() {
       <div className="w-full">
         {projects.map((project, index) => {
           const works = project.works;
-          console.log("type::::", project.type);
           return (
             <div
               className="w-full flex flex-col md:flex-row align-baseline mt-12"

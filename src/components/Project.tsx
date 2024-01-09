@@ -29,7 +29,7 @@ export default function Project({
 }: ProjectProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
+  const [loading, setLoading] = useState(true);
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -37,11 +37,21 @@ export default function Project({
   const toggleSideDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
+
+  const onLoadStart = () => {
+    console.log("ERJREJEKD");
+    setLoading(true);
+  };
+
+  const onLoadFinish = () => {
+    setLoading(false);
+  };
+
   return (
     <>
       <div
-        className="w-full h-42 rounded border border-gray-100 hover:border-gray-200 shadow-sm
-    hover:shadow-[0_2px_4px_rgb(0,0,0,0.05)] p-5 transition-all ease group hover:cursor-pointer mb-8"
+        className="w-full h-42 rounded border border-gray-100 hover:border-gray-200 shadow-sm hover:shadow-[0_2px_4px_rgb(0,0,0,0.05)] 
+        p-5 transition-all ease group hover:cursor-pointer mb-8"
       >
         <div
           className="w-full flex justify-between items-start min-h-16 rounded gap-5"
@@ -94,7 +104,19 @@ export default function Project({
         </div>
       </div>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <p>kjsdjksdjk</p>
+        {loading && (
+          <div className="flex justify-center items-center h-8">
+            <p>Please wait...</p>
+          </div>
+        )}
+        <iframe
+          src={url}
+          width="100%"
+          height="500px"
+          className="w-full h-full"
+          title="External Website"
+          onLoad={onLoadFinish}
+        />
       </Modal>
       <SideDrawer isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
         <h1 className="text-xl font-medium mb-4">{title} Mobile Application</h1>
