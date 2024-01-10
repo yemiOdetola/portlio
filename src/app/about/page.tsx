@@ -9,7 +9,7 @@ import { timeline, connect } from "@/utils/me";
 
 const containerVariants = {
   init: { opacity: 0 },
-  final: { opacity: 1, transition: { duration: 1 } },
+  final: { opacity: 1, transition: { duration: 0.3 } },
 };
 
 export default function page() {
@@ -28,19 +28,21 @@ export default function page() {
             <div className="mb-4">
               <h5 className="mb-2 font-semibold font-base">Interests</h5>
               <p>
-                I am interested in learning Backend with other language like
-                Java, Go or with Python. I also want to know how to make a video
-                game with Unity or other and I am very interested in being a
-                content creator whether programming or something else.
+                As a frontend engineer, I have a passion for creating intuitive
+                and engaging user experiences. My specialty is in React, where I
+                enjoy building modular and performant interfaces. I strive to
+                write clean, reusable code and always look for opportunities to
+                implement the latest web standards and best practices.
               </p>
             </div>
             <div className="mb-4">
               <h5 className="mb-2 font-semibold font-base">Challenges</h5>
               <p>
-                For now I am learning how to make applications with real time
-                communication such as a chat using Socket.IO, Iam also starting
-                to learn the way to be Devops using Docker, Kubernetes, AWS or
-                others.
+                Each project is a chapter, each challenge a chance to level up.
+                I&apos;m currently exploring C# and .NET. I find
+                backend development intellectually stimulating (networks,
+                threads etc.), and I enjoy the new creative challenges it presents.
+                Currently cooking with python(flask).
               </p>
             </div>
           </div>
@@ -68,7 +70,11 @@ export default function page() {
               return (
                 <Link
                   key={`connect-${index}`}
-                  href={el.social == 'Email' ? 'mailto:yemiotola@gmail.com' : `https://${el.url}`}
+                  href={
+                    el.social == "Email"
+                      ? "mailto:yemiotola@gmail.com"
+                      : `https://${el.url}`
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-[48%] p-4 rounded border border-gray-300 flex items-center justify-between hover:opacity-70"
@@ -85,7 +91,7 @@ export default function page() {
         </div>
       </div>
 
-      <motion.div className="w-full flex flex-col md:flex-row align-baseline md:space-x-6">
+      {/* <motion.div className="w-full flex flex-col md:flex-row align-baseline md:space-x-6">
         <h2 className="w-full md:w-1/5 font-semibold text-lg">Whats fun?</h2>
         <div className="w-full md:w-4/5">
           <div className="mb-4">
@@ -116,7 +122,7 @@ export default function page() {
             </p>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
     </Container>
   );
 }
