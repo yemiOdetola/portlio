@@ -36,7 +36,7 @@ export default function SideDrawer({
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "120%", opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-0 right-0 bottom-0 z-50 w-[440px] bg-white shadow-lg overflow-y-auto"
+            className="fixed top-0 right-0 bottom-0 z-50 w-[520px] bg-white shadow-lg overflow-y-auto"
             onClick={closeOnOverlayClick}
           >
             <div className="flex justify-end p-4">

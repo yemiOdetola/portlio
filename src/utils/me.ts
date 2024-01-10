@@ -154,21 +154,13 @@ export const projects = [
     type: "frontend",
     works: [
       {
-        title: "Mojec meters",
-        description:
-          "The meter allocation and ordering process involves assigning meter numbers to households upon registration, enabling their use with IKEDC, IBEDC, EDC...",
-        tech: ["Typescript", "Angular", "SCSS", "Rxjs", "UI design"],
-        repo: "",
-        image: "/images/mojec.svg",
-        url: "https://mojecmeters.com/meter",
-      },
-      {
         title: "Sety v2",
         description:
           "Sety is delivering on-demand safety and security for businesses, individuals and families. ",
         tech: ["Typescript", "React", "Tailwindcss", "Framer motion"],
         repo: "",
         image: "/images/sety.png",
+        gif: "/images/roothub.gif",
         url: "http://sety-landing.surge.sh/",
       },
       {
@@ -178,7 +170,18 @@ export const projects = [
         tech: ["Typescript", "Angular", "SCSS", "Rxjs", "UI design"],
         repo: "",
         image: "/images/roothub.png",
+        gif: "/images/roothub.gif",
         url: "https://www.wearetheroothub.com/",
+      },
+      {
+        title: "Mojec meters",
+        description:
+          "The meter allocation and ordering process involves assigning meter numbers to households upon registration, enabling their use with IKEDC, IBEDC, EDC...",
+        tech: ["Typescript", "Angular", "SCSS", "Rxjs", "UI design"],
+        repo: "",
+        image: "/images/mojec.svg",
+        gif: "/images/roothub.gif",
+        url: "https://mojecmeters.com/meter",
       },
       {
         title: "Finovo",
@@ -187,6 +190,7 @@ export const projects = [
         tech: ["Javascript", "JQuery", "HTML5 & Css", "A11y"],
         repo: "",
         image: "/images/finovo.webp",
+        gif: "/images/finovo-web.gif",
         url: "https://finovo.ng",
       },
       {
@@ -201,8 +205,9 @@ export const projects = [
           "HTML5",
           "A11y",
         ],
-        repo: "",
+        repo: "https://github.com/yemiOdetola/craftcv",
         image: "/images/craftcv.svg",
+        gif: "/images/craftcv.gif",
         url: "https://craftcv.vercel.app",
       },
       {
@@ -212,6 +217,7 @@ export const projects = [
         tech: ["Typescript", "React", "Sass", "HTML5 & CSS3", "A11y"],
         repo: "",
         image: "/images/cudo.png",
+        gif: "/images/roothub.gif",
         url: "https://cudoapp.com/",
       },
     ],

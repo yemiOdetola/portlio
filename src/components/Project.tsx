@@ -42,7 +42,7 @@ export default function Project({
         setIsModalOpen(false);
       }
     },
-    [isModalOpen, isDrawerOpen, setIsDrawerOpen]
+    [isModalOpen, isDrawerOpen, setIsModalOpen]
   );
 
   useEffect(() => {
@@ -59,11 +59,6 @@ export default function Project({
 
   const toggleSideDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
-  };
-
-  const onLoadStart = () => {
-    console.log("ERJREJEKD");
-    setLoading(true);
   };
 
   const onLoadFinish = () => {
@@ -134,20 +129,42 @@ export default function Project({
         </div>
       </div>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        {loading && (
-          <div className="flex justify-center items-center h-8">
-            <p>Please wait...</p>
-          </div>
-        )}
-        <iframe
-          ref={iframeRef}
-          src={url}
-          width="100%"
-          height="500px"
-          className="w-full h-full"
-          title="External Website"
-          onLoad={onLoadFinish}
+        <h1 className="text-xl font-medium mb-4">{title} Mobile Application</h1>
+        <Image
+          src={gif}
+          alt={description}
+          width={800}
+          height={600}
+          className="mx-auto max-h-[600px] object-contain"
         />
+        <div className="mt-2 p-4 overflow-y-auto">
+          <h5 className="font-semibold text-base">About</h5>
+          <p className="my-2 block">{description}</p>
+          <div className="mt-6">
+            <h5 className="font-semibold text-base mb-2">Technologies</h5>
+            <div className="flex items-center flex-wrap gap-3">
+              {tech.map((el, index) => (
+                <span
+                  className="border border-gray-400 block py-1 px-3 text-xs rounded-xl"
+                  key={`tech-${index}`}
+                >
+                  {el}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="mt-6">
+            <h5 className="font-semibold text-base mb-2">URL</h5>
+            <Link
+              href={url}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="block underline font-semibold"
+            >
+              {url}
+            </Link>
+          </div>
+        </div>
       </Modal>
       <SideDrawer isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
         <h1 className="text-xl font-medium mb-4">{title} Mobile Application</h1>
@@ -156,7 +173,7 @@ export default function Project({
           alt={description}
           width={360}
           height={600}
-          className="mx-auto max-h-[480px] object-contain"
+          className="mx-auto max-h-[600px] object-contain"
         />
         <div className="mt-2 p-4 overflow-y-auto">
           <h5 className="font-semibold text-base">About</h5>
