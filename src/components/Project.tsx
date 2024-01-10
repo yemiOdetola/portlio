@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { PiArrowUpRight, PiGithubLogo, PiLink } from "react-icons/pi";
@@ -30,6 +30,29 @@ export default function Project({
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [loading, setLoading] = useState(true);
+  const iframeRef: any = useRef(null);
+
+  const handleEscKey = useCallback(
+    (e: KeyboardEvent) => {
+      if (
+        (e.key === "Escape" && isModalOpen) ||
+        (e.key === "Escape" && isDrawerOpen)
+      ) {
+        setIsDrawerOpen(false);
+        setIsModalOpen(false);
+      }
+    },
+    [isModalOpen, isDrawerOpen, setIsDrawerOpen]
+  );
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleEscKey);
+
+    return () => {
+      window.removeEventListener("keydown", handleEscKey);
+    };
+  }, [handleEscKey]);
+
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -71,7 +94,12 @@ export default function Project({
               <h3 className="text-md lg:text-lg font-medium mb-2 mr-2">
                 {title}
               </h3>
-              <Link href={url} target="_blank" rel="noopener noreferrer">
+              <Link
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+              >
                 <PiArrowUpRight
                   size={18}
                   className="relative bottom-1 text-zinc-500"
@@ -88,6 +116,7 @@ export default function Project({
               className={`inline-flex items-center transition-all ease cursor-not-allowed ${
                 repo && "cursor-auto"
               }`}
+              onClick={(e) => e.stopPropagation()}
             >
               <PiGithubLogo size={32} />
             </Link>
@@ -96,6 +125,7 @@ export default function Project({
               href={url}
               target="_blank"
               rel="noreferrer noopener"
+              onClick={(e) => e.stopPropagation()}
               className="inline-flex items-center rounded-lg transition-all ease hover:opacity-50"
             >
               <PiLink size={32} />
@@ -110,6 +140,7 @@ export default function Project({
           </div>
         )}
         <iframe
+          ref={iframeRef}
           src={url}
           width="100%"
           height="500px"

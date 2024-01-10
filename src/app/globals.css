@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 html,
-body {
+body, iframe {
   scroll-behavior: smooth;
-  cursor: none;
+  /* cursor: none; */
 }
 
 .cursor {
@@ -13,7 +13,7 @@ body {
   height: 64px;
   border-radius: 100%;
   border: 1px solid rgba(0, 0, 0, 0.4);
-  transition: all 233ms ease-out;
+  transition: all 111ms ease-out;
   position: fixed;
   pointer-events: none;
   z-index: 99;
