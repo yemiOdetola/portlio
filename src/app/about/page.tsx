@@ -26,23 +26,23 @@ export default function page() {
           <h2 className="w-full md:w-1/5 font-semibold text-lg">About me</h2>
           <div className="w-full md:w-4/5">
             <div className="mb-4">
-              <h5 className="mb-2 font-semibold font-base">Interests</h5>
+              {/* <h5 className="mb-2 font-semibold font-base">Interests</h5> */}
               <p>
-                As a frontend engineer, I have a passion for creating intuitive
-                and engaging user experiences. My specialty is in React, where I
-                enjoy building modular and performant interfaces. I strive to
-                write clean, reusable code and always look for opportunities to
-                implement the latest web standards and best practices.
+                The art of frontend development lights me up - the chance to
+                blend visually aesthetic designs with smooth, functional
+                interactions. I strive to write clean, reusable code and always
+                look for opportunities to implement the latest web standards and
+                best practices.
               </p>
             </div>
             <div className="mb-4">
-              <h5 className="mb-2 font-semibold font-base">Challenges</h5>
+              <h5 className="mb-2 font-semibold font-base">Challenge</h5>
               <p>
-                Each project is a chapter, each challenge a chance to level up.
-                I&apos;m currently exploring C# and .NET. I find
+                I see each project as a chapter, each challenge a chance to
+                level up. I&apos;m currently exploring C# and .NET. I find
                 backend development intellectually stimulating (networks,
-                threads etc.), and I enjoy the new creative challenges it presents.
-                Currently cooking with python(flask).
+                streams, threads etc.), and I enjoy the creative challenges it
+                presents. Currently cooking with python(flask).
               </p>
             </div>
           </div>

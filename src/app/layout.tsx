@@ -37,10 +37,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="author" content="Odetola Azeez" />
-        <title>
-          Frontend enginner | React | Next.js | React native | Node.js | Vue.js
-          | Angular | Redux| Python | Flask
-        </title>
+        <title>Odetola Azeez | Frontend enginner</title>
         <meta
           name="description"
           content="Odetola is a frontend + Mobile engineer. He has 5 years experience building web/mobile solutions."
