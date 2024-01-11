@@ -120,7 +120,7 @@ export const connect = [
   },
   {
     social: "Twitter",
-    url: "twitter.com/yemiodetola",
+    url: "twitter.com/yemiotola",
     icon: PiTwitterLogoBold,
   },
 ];
