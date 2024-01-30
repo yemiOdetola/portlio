@@ -160,7 +160,7 @@ export const projects = [
         tech: ["Typescript", "React", "Tailwindcss", "Framer motion"],
         repo: "",
         image: "/images/sety.png",
-        gif: "/images/roothub.gif",
+        gif: "/images/sety-d.gif",
         url: "http://sety-landing.surge.sh/",
       },
       {
@@ -180,7 +180,7 @@ export const projects = [
         tech: ["Typescript", "Angular", "SCSS", "Rxjs", "UI design"],
         repo: "",
         image: "/images/mojec.svg",
-        gif: "/images/roothub.gif",
+        gif: "/images/mojec.gif",
         url: "https://mojecmeters.com/meter",
       },
       {
@@ -217,7 +217,7 @@ export const projects = [
         tech: ["Typescript", "React", "Sass", "HTML5 & CSS3", "A11y"],
         repo: "",
         image: "/images/cudo.png",
-        gif: "/images/roothub.gif",
+        gif: "/images/cudo.gif",
         url: "https://cudoapp.com/",
       },
     ],
